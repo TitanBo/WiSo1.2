@@ -1,9 +1,12 @@
+import com.sun.jdi.Value;
+
 import java.util.Scanner;
 
 public class Main
 {
     static Scanner sc = new Scanner(System.in);
     static boolean schleife = true;
+    static int score = 0;
 
     public static void main(String[] args)
     {
@@ -76,8 +79,9 @@ public class Main
         while (schleife)
         {
 // ============================== QuizStart =============================
-            int score = 0;
+
             System.out.println(StringList.strHeadline);
+
             //int randomIndex = (int) (Math.random() * 29);
 
 /*TODO  ~ Finish StringAnswers and StringQuestions till we collapse
@@ -127,7 +131,7 @@ public class Main
             }
         }
     }
-    private static void kapDreiIndex00(int randomIndex, int score)
+    private static void kapDreiIndex00(int randomIndex, int tscore)
     {
         // züfällige Auswahl aus FragenArray
         for ( int i = 0; i <= randomIndex; i++ )
@@ -138,10 +142,10 @@ public class Main
         // zugehörige Auswahl aus AntwortenArray
         for ( int i = 0; i <= randomIndex; i++ )
         {
-
             System.out.println(AntwortArray.getAntworten(randomIndex));
             break;
         }
+        System.out.println(StringList.strScore + score);
         System.out.println(StringList.strFootLine);
         String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
         switch (startInput)
@@ -162,37 +166,976 @@ public class Main
 
         }
     }
-    private static void kapDreiIndex01(int randomIndex, int score){}
-    private static void kapDreiIndex02(int randomIndex, int score){}
-    private static void kapDreiIndex03(int randomIndex, int score){}
-    private static void kapDreiIndex04(int randomIndex, int score){}
-    private static void kapDreiIndex05(int randomIndex, int score){}
-    private static void kapDreiIndex06(int randomIndex, int score){}
-    private static void kapDreiIndex07(int randomIndex, int score){}
-    private static void kapDreiIndex08(int randomIndex, int score){}
-    private static void kapDreiIndex09(int randomIndex, int score){}
-    private static void kapDreiIndex10(int randomIndex, int score){}
-    private static void kapDreiIndex11(int randomIndex, int score){}
-    private static void kapDreiIndex12(int randomIndex, int score){}
-    private static void kapDreiIndex13(int randomIndex, int score){}
-    private static void kapDreiIndex14(int randomIndex, int score){}
-    private static void kapDreiIndex15(int randomIndex, int score){}
-    private static void kapDreiIndex16(int randomIndex, int score){}
-    private static void kapDreiIndex17(int randomIndex, int score){}
-    private static void kapDreiIndex18(int randomIndex, int score){}
-    private static void kapDreiIndex19(int randomIndex, int score){}
-    private static void kapDreiIndex20(int randomIndex, int score){}
-    private static void kapDreiIndex21(int randomIndex, int score){}
-    private static void kapDreiIndex22(int randomIndex, int score){}
-    private static void kapDreiIndex23(int randomIndex, int score){}
-    private static void kapDreiIndex24(int randomIndex, int score){}
-    private static void kapDreiIndex25(int randomIndex, int score){}
-    private static void kapDreiIndex26(int randomIndex, int score){}
-    private static void kapDreiIndex27(int randomIndex, int score){}
-    private static void kapDreiIndex28(int randomIndex, int score){}
-    private static void kapDreiIndex29(int randomIndex, int score){}
+    private static void kapDreiIndex01(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
 
-    private static void kapitelVier()
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "1", "2", "3", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort02_5);
+            }
+            case "5" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort02_5);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex02(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "2", "3", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort03_1);
+            }
+            case "1" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort03_1);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex03(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for ( int i = 0; i <= randomIndex; i++ )
+        {
+
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "1", "5", "3", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort04_2);
+            }
+            case "2" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort04_2);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex04(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "2", "3", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort05_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort05_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex05(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "2", "3", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort06_1);
+            }
+            case "1" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort06_1);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex06(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "1", "3", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort07_2);
+            }
+            case "2" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort07_2);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex07(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "1", "2", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort08_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort08_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex08(int randomIndex, int tscore)
+    {
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort09_1);
+            }
+            case "1" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort09_1);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex09(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort10_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort10_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    //=========================================================================
+    private static void kapDreiIndex10(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort11_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort11_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex11(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "4", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort12_5);
+            }
+            case "5" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort12_5);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex12(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort13_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort13_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex13(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort14_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort14_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex14(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort15_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort15_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex15(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "4", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort16_2);
+            }
+            case "2" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort16_2);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex16(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "4", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort17_5);
+            }
+            case "5" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort17_5);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex17(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort18_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort18_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex18(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "4", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort19_5);
+            }
+            case "5" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort19_5);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex19(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort20_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort20_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex20(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "4", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort21_2);
+            }
+            case "2" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort21_2);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex21(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "4" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort22_1);
+            }
+            case "1" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort22_1);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex22(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort23_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort23_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex23(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "4", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort24_2);
+            }
+            case "2" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort24_2);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex24(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort25_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort25_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex25(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort26_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort26_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex26(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort27_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort27_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex27(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort28_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort28_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex28(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "3", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort29_4);
+            }
+            case "4" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort29_4);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+    private static void kapDreiIndex29(int randomIndex, int tscore){
+        // züfällige Auswahl aus FragenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(FragenArray.getFragen(randomIndex));
+            break;
+        }
+        // zugehörige Auswahl aus AntwortenArray
+        for (int i = 0; i <= randomIndex; i++)
+        {
+            System.out.println(AntwortArray.getAntworten(randomIndex));
+            break;
+        }
+        System.out.println(StringList.strScore + score);
+        System.out.println(StringList.strFootLine);
+        String startInput = sc.next();  //TODO Variable + true/false für Zusammenfassung übergeben
+        switch (startInput)
+        {
+            case "5", "4", "2", "1" ->
+            {
+                System.out.println(StringList.strFalsch);
+                System.out.println(AntwortArray.antwort30_3);
+            }
+            case "3" ->
+            {
+                System.out.println(StringList.strRichtig);
+                System.out.println(AntwortArray.antwort30_3);
+                score = score + 3;
+            }
+            case "6" -> Main.kapitelAuswahl();
+            default -> System.out.println(StringList.strWhooops);
+        }
+    }
+
+    private static int kapitelVier()
     {
         while (schleife)
         {
@@ -204,5 +1147,7 @@ public class Main
                 default -> System.out.println(StringList.strWhooops);
             }
         }
+        return score;
     }
+
 }

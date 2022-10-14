@@ -4,11 +4,21 @@ public class StringList
 
 //    =================================== Strings ====================================
 
+    static String strWiSoQuiz = "WiSo - Quiz";
+    static String strDatei = "Datei";
+    static String strLaden = "Laden";
+    static String strSpeichern = "Speichern";
+    static String strDrucken = "Drucken";
+    static String strZubehoer = "Hilfsmittel";
+    static String strCalkulator = "Rechner";
+    static String strNotiz = "Notizen";
+
+    static String strScore = "\nScore: ";
 
     static String strVerabschiedung = "\nbis zum nächsten Quiz.";
     static String strWhooops = "\nHuppala. Falscheingabe!^^";
     static String strHeadline = "\n===========================================  WiSo-Quiz  ===========================================\n\n";
-    static String strFootLine = "\n                                                                                   [6] Quiz Beenden";
+    static String strFootLine = "\n[6] Quiz Beenden";
 
 //    ================================= StringBlocks =================================
 
